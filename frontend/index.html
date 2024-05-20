@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Ducks</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/maximilian" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Book Ducky</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#" id="loginRegisterLink" class="btn">Login/Register</a>
+          </li>
+          <li>
+            <a href="#" id="savedBooks" class="hidden btn">Saved books</a>
+          </li>
+          <li>
+            <a href="#" id="logoutBtn" class="hidden btn">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="welcomeStart">
+      <div id="loggedInUser">
+        <h2></h2>
+        <p class="short-text">
+          Craving the rhythm of words or the thrill of a teen adventure? Book
+          Ducky's expert booksellers can guide you. Explore our curated
+          collection of poetry and teen books, and unleash your inner wordsmith
+          or hero!
+        </p>
+      </div>
+    </div>
+    <div id="displayBooks">
+      <ul id="bookList"></ul>
+    </div>
+    <div id="loginContainer" class="hidden">
+      <div class="loginRegisterModal">
+        <div class="login-section">
+          <h2>Log in</h2>
+          <div>
+            <label for="identifier">Username</label>
+            <input type="text" name="identifier" id="identifier" required />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required />
+          </div>
+          <button class="btn" id="loginBtn">Login</button>
+        </div>
+        <div class="register-section">
+          <h2>Or</h2>
+          <h2>Register</h2>
+          <div>
+            <label for="registerEmail">E-mail</label>
+            <input
+              type="text"
+              name="registerEmail"
+              id="registerEmail"
+              required
+            />
+          </div>
+          <div>
+            <label for="registerUsername">Username</label>
+            <input
+              type="text"
+              name="registerUsername"
+              id="registerUsername"
+              required
+            />
+          </div>
+          <div>
+            <label for="registerPassword">Password</label>
+            <input
+              type="password"
+              name="registerPassword"
+              id="registerPassword"
+              required
+            />
+          </div>
+          <button class="btn" id="registerBtn">Register</button>
+        </div>
+      </div>
+    </div>
+    <div id="userBookList" class="hidden">
+      <div class="userBooksModal">
+        <h3 id="userBookListMsg">Hi there! These are your saved books</h3>
+        <button id="sortByTitle" class="btn">Sort by title</button>
+        <button id="sortByAuthor" class="btn">Sort by author</button>
+        <ul id="savedBookList"></ul>
+      </div>
+    </div>
+    <footer>book ducky</footer>
+  </body>
+</html>
